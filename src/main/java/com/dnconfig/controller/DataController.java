@@ -18,6 +18,8 @@ public class DataController {
 	
 	@GetMapping("getAll")
 	public List<Employee> getAll(){
+		int[] arr = null;
+		System.out.println(arr[0]);
 		return dataService.getAllEmployee();
 	}
 	

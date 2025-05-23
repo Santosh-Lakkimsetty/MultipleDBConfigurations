@@ -1,6 +1,7 @@
 package com.dnconfig.controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -58,5 +59,14 @@ class DataControllerTest {
         assertEquals(2, result.size());
         assertEquals("Alice", result.get(0).getFirstname());
         verify(dataService, times(1)).saveAllEmployees();
+    }
+    
+    @Test
+    void testGetAll_throwsException() {
+        Exception exception = assertThrows(NullPointerException.class, () -> {
+            dataController.getAll();
+        });
+
+        System.out.println("Caught Exception: " + exception);
     }
 }
