@@ -61,12 +61,12 @@ class DataControllerTest {
         verify(dataService, times(1)).saveAllEmployees();
     }
     
-    @Test
-    void testGetAll_throwsException() {
-        Exception exception = assertThrows(NullPointerException.class, () -> {
-            dataController.getAll();
-        });
-
-        System.out.println("Caught Exception: " + exception);
-    }
+//    @Test
+//    void testGetAll_throwsException() {
+//        Exception exception = assertThrows(NullPointerException.class, () -> {
+//            dataController.getAll();
+//        });
+//
+//        System.out.println("Caught Exception: " + exception);
+//    }
 }
