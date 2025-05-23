@@ -12,8 +12,8 @@ jobs:
 
     steps:
       - name: Echo test
-        run: echo "CI is working 
-        
+        run: echo "CI is working"
+      
       - name: Checkout code
         uses: actions/checkout@v2
 
