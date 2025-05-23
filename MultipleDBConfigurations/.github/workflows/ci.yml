@@ -1,4 +1,4 @@
-name: Java CI with Maven
+name: Java CI Test
 
 on:
   push:
@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Echo test
+        run: echo "CI is working 
+        
       - name: Checkout code
         uses: actions/checkout@v2
 
